@@ -15,7 +15,7 @@ function SearchBar(props){
 
     return (
         <form onSubmit={handleOnSubmit}>
-            <label htmlFor="search">Search :</label>
+            <label htmlFor="search">Search: </label>
             <input 
                 type="text" 
                 id="search" 
@@ -23,6 +23,7 @@ function SearchBar(props){
                 value={input}
                 onChange={e => setInput(e.target.value)}
                 /><br/>
+                <br/>
             <label htmlFor="title">Title</label>
             <input 
                 type="radio" 
@@ -50,6 +51,7 @@ function SearchBar(props){
                 onChange={e => setField(e.target.value)}
                 checked={field === "plot"}
                 />
+            <br/>
             <br/>
             <button type="submit">
                 Search

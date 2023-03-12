@@ -1,9 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-import Table from './components/Table'
-import MovieForm from './components/MovieForm';
-import SearchBar from './components/SearchBar';
+//import Table from './components/Table'
+//import MovieForm from './components/MovieForm';
+//import SearchBar from './components/SearchBar';
 import { useEffect, useState } from 'react';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from './Pages/HomePage';
+//import NavBar from './components/NavBar';
+import Table from './Pages/MovieListPage';
+import NavLayout from './Layouts/NavLayout';
+import MoviePage from './Pages/MoviePage';
+import SingleMovie from './components/SingleMovie'
+
+
 
 
 const DATA_URL = "https://raw.githubusercontent.com/dd-code-immersives/movie-project/main/react-intro-form/data/movies.json"
@@ -61,22 +69,75 @@ function App() {
 
 	 setMovies(moviesFiltered)
   } 
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <NavLayout/>,
+      
+      children:[
+        {
+          index: true,
+          element:  <HomePage/>,
+        },
+        {
+          path: "/movies",
+          element: <Table movies={movies || []} removeMovie={removeMovie} filterMovies={filterMovies} addMovie={addMovie}/>,
+          index: true,
+        },
+          
+        {
+          
+         element:<MoviePage  movies={movies || []}/>,
+         path: "/movie",
+         children: [
+        { 
+          element: <SingleMovie movies={movies || []} />,
+          path: ":title"
+
+        }
+      ]
+    }
+
+          
+        
+      ],
+    },
+      
+    // <SearchBar	filterMovies={filterMovies}
+      
+
+    
+
+      
+      
+     
+    
+    
+  ]);
   
   
 
   return (
  <div className="App">
-  <SearchBar	
-	filterMovies={filterMovies}
-  />
-  <Table 
+  
+  {/* <Table 
      movies={movies || []}
      removeMovie={removeMovie}
 	
-  />
-  <MovieForm 
-    addMovie={addMovie}
-  />
+  /> */}
+
+
+
+<RouterProvider router={router} />
+
+
+{/* <SearchBar	
+	filterMovies={filterMovies}
+  /> */}
+
+
+
 </div>
   );
 }
@@ -110,3 +171,6 @@ function App() {
 
 
 export default App;
+
+
+

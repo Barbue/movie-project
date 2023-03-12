@@ -74,7 +74,7 @@ function MovieForm(props) {
     // or we will get the "too many re-render error"
     return (
         <form onSubmit={onFormSubmit}>
-            <label htmlFor="title">Title :</label>
+            <label htmlFor="title">Title: </label>
             <input 
                 type="text" 
                 id="title" 
@@ -82,7 +82,8 @@ function MovieForm(props) {
                 value={title}
                 onChange={e => setTitle(e.target.value)}
                 /><br/>
-            <label htmlFor="actors">Actors:</label>
+                <br/>
+            <label htmlFor="actors">Actors: </label>
             <input 
                 type="text" 
                 id="actors" 
@@ -92,7 +93,8 @@ function MovieForm(props) {
                 onChange={e => setActors(e.target.value)}
                 />
             <br/>
-             <label htmlFor="plot">Plot:</label>
+            <br/>
+             <label htmlFor="plot">Plot: </label>
              <input 
                 type="text" 
                 id="plot" 
@@ -100,7 +102,8 @@ function MovieForm(props) {
                 value={plot} 
                 onChange={e => setPlot(e.target.value)}
                 /><br/>
-             <label htmlFor="genre">Genre:</label>
+                <br/>
+             <label htmlFor="genre">Genre: </label>
              <input 
                 type="text" 
                 id="genre" 
@@ -109,7 +112,8 @@ function MovieForm(props) {
                 onChange={e => setGenre(e.target.value)}
                 />
                 <br/>
-            <label htmlFor="imdbRating">imdbRating:</label>
+                <br/>
+            <label htmlFor="imdbRating">imdbRating: </label>
              <input 
                 type="text" 
                 id="imdbRating" 
@@ -118,7 +122,8 @@ function MovieForm(props) {
                 onChange={e => setImdbRating(e.target.value)}
                 />
             <br/>
-            <label htmlFor="director">Director:</label>
+            <br/>
+            <label htmlFor="director">Director: </label>
              <input 
                 type="text" 
                 id="director" 
@@ -127,7 +132,8 @@ function MovieForm(props) {
                 onChange={e => setDirector(e.target.value)}
                 />
             <br/>
-            <label htmlFor="year">Year:</label>
+            <br/>
+            <label htmlFor="year">Year: </label>
              <input 
                 type="text" 
                 id="year" 
@@ -135,6 +141,7 @@ function MovieForm(props) {
                 value={year} 
                 onChange={e => setYear(e.target.value)}
             />
+             <br/>
              <br/>
             <button type="submit">
                 Submit

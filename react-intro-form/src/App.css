@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  color: white;
+  background-color: darkgreen;
+  background-image: url('image/Mgm-logo-2021-1024x640.webp');
+  font-weight: 1000;
+  /* padding-top: 5%; */
+  
+     
+
+}
+
+.navbar {
+
+ font-size: xx-large;
+ padding-bottom: 3%; 
+ padding-top: 2%;
+ background-image: url('image/Alternate-Content-Picture-900x598\ Small.jpeg');
+
+}
+
+.homepage {
+font-size:300%;
+font-stretch: ultra-expanded;
+font-style: oblique;
+
+
+
+}
