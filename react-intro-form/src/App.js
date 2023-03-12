@@ -104,7 +104,7 @@ function App() {
       ],
     },
       
-    // <SearchBar	filterMovies={filterMovies}
+   
       
 
     
