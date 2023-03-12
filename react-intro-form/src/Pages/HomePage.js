@@ -8,7 +8,7 @@ const HomePage = () => {
 
     return (
         <div className="homepage">
-          <h1>Movie Home</h1>
+          <h1>Home Of Movies</h1>
          
         </div>
       );
